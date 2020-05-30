@@ -8,9 +8,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/MohAnghabo/fix-frameworks-permissions/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/MohAnghabo/fix-frameworks-permissions/pulls)
 
 </div>
 
@@ -25,6 +24,7 @@
 
 A repo to host all the files I'm using to fix permissions in a linux environment.
 
-## 🚀 Deployment <a name = "TODO"></a>
+## 🚀 TODO <a name = "TODO"></a>
 
--
+- Create command line tool for both linux and windows environemnts.
+- Include more frameworks (Yii, Symphoni, etc.)
