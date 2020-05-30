@@ -1,25 +1,27 @@
 #!/bin/bash
-#
-# This script configures WordPress file permissions based on recommendations
-# from http://codex.wordpress.org/Hardening_WordPress#File_permissions
-#
-# Author: Michael Conigliaro <mike [at] conigliaro [dot] org>
-#
-WP_OWNER=www-data # <-- wordpress owner
-WP_GROUP=www-data # <-- wordpress group
-WP_ROOT=$1 # <-- wordpress root directory
-WS_GROUP=www-data # <-- webserver group
+
+# Wordpress Owner
+wordpress_owner=www-data
+
+# Wordpress Group
+wordpress_group=www-data # <-- wordpress group
+
+# WordPress Engine Directory: first parameter after the run command
+wordpress_dir=$1
+
+# Webserver Group
+server_group=www-data
 
 # reset to safe defaults
-find ${WP_ROOT} -exec chown ${WP_OWNER}:${WP_GROUP} {} \;
-find ${WP_ROOT} -type d -exec chmod 755 {} \;
-find ${WP_ROOT} -type f -exec chmod 644 {} \;
+find ${wordpress_dir} -exec chown ${wordpress_owner}:${wordpress_group} {} \;
+find ${wordpress_dir} -type d -exec chmod 755 {} \;
+find ${wordpress_dir} -type f -exec chmod 644 {} \;
 
 # allow wordpress to manage wp-config.php (but prevent world access)
-chgrp ${WS_GROUP} ${WP_ROOT}/wp-config.php
-chmod 660 ${WP_ROOT}/wp-config.php
+chgrp ${server_group} ${wordpress_dir}/wp-config.php
+chmod 660 ${wordpress_dir}/wp-config.php
 
 # allow wordpress to manage wp-content
-find ${WP_ROOT}/wp-content -exec chgrp ${WS_GROUP} {} \;
-find ${WP_ROOT}/wp-content -type d -exec chmod 775 {} \;
-find ${WP_ROOT}/wp-content -type f -exec chmod 664 {} \;
+find ${wordpress_dir}/wp-content -exec chgrp ${server_group} {} \;
+find ${wordpress_dir}/wp-content -type d -exec chmod 775 {} \;
+find ${wordpress_dir}/wp-content -type f -exec chmod 664 {} \;
