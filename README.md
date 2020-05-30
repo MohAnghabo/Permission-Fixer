@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://res.cloudinary.com/dwq0cerli/image/upload/v1590812390/3064443877_d0bfb962-eabe-474a-ae8e-6360700af8e4.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Fix FrameWorks Permissions</h3>
