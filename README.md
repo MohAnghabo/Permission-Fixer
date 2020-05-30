@@ -18,7 +18,7 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [TODO](#TODO.md)
+- [TODO](#TODO)
 
 ## 🧐 About <a name = "about"></a>
 
