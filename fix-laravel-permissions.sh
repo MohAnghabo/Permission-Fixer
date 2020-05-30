@@ -1,3 +1,4 @@
 #!/bin/bash
 
-chmod -R 0644 application system index.php
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
